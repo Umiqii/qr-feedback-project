@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+    height: auto;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #555;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="email"], textarea, .submit-btn {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Yuvarlatılmış köşeler */
+    background-color: #fafafa;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #4285f4;
+    outline: none;
+}
+
+.phone-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px; /* Boşluk ekleme */
+}
+
+.phone-group input {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.phone-input {
+    width: 370px; /* Özel genişlik */
+    height: 41px; /* Özel yükseklik */
+    border-radius: 8px; /* Yuvarlatılmış köşeler ekledi */
+    margin-bottom: 15px; /* Alt elemanla boşluk */
+}
+
+textarea {
+    height: 200px;
+    resize: none;
+}
+
+.consent {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.consent input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.consent label {
+    font-size: 14px;
+    color: #222;
+    display: flex;
+    align-items: center;
+}
+
+.submit-btn {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #3367d6;
+}
+
+.submit-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .logo {
+        max-width: 150px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container, input, textarea, .submit-btn {
+        padding: 10px;
+    }
+
+    .title, .consent label {
+        font-size: 16px;
+    }
+
+    .phone-input {
+        width: 100%; /* Küçük ekranlar için genişlik %100 */
+        height: auto; /* Küçük ekranlar için yükseklik otomatik */
+    }
+}

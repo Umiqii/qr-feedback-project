@@ -1,0 +1,113 @@
+/* Genel Ayarlar */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Konteyner Ayarları */
+.admin-container, .login-container {
+    width: 90%;
+    max-width: 800px; /* Ekran boyutuna göre sınır */
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Yumuşak gölge efekti */
+    transition: all 0.3s ease-in-out;
+}
+
+.admin-container:hover, .login-container:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Hover sırasında gölgeyi artır */
+}
+
+/* Başlık Ayarları */
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+}
+
+/* Tablo Ayarları */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease; /* Hover sırasında renk geçişi için */
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    color: #555;
+}
+
+th {
+    background-color: #f7f7f7;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Alternatif satır renkleri */
+tr:nth-child(even) {
+    background-color: #fcfcfc;
+}
+
+tr:nth-child(odd) {
+    background-color: #f7f7f7;
+}
+
+/* Linkler */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    background-color: #4285f4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+a:hover {
+    background-color: #3367d6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Hover'da gölge ekle */
+    color: white;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .admin-container, .login-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    a {
+        width: 100%; /* Küçük ekranlarda tam genişlik */
+        padding: 12px;
+    }
+}

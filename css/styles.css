@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Konteyner */
+.container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Hover efekti ile gölgeyi artır */
+.container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo alanı */
+.logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Logo hover animasyonu */
+.logo:hover {
+    transform: rotate(10deg);
+}
+
+/* Puanlama alanı */
+.rating-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    text-transform: capitalize; /* Başlıkları daha şık göstermek için */
+}
+
+/* Yıldızlar */
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.star {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, filter 0.2s ease;
+}
+
+/* Yıldız hover animasyonu */
+.star:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2); /* Hover'da parlaklık artar */
+}
+
+/* Aktif yıldız (Seçili yıldız) */
+.star.selected {
+    transform: scale(1.3);
+    filter: brightness(1.5); /* Seçilen yıldız daha parlak görünür */
+}
+
+/* Yıldızlar arası boşluk */
+.stars + .feedback {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Responsive Tasarım - Küçük Ekranlar İçin */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        max-width: 120px;
+    }
+
+    .star {
+        width: 30px;
+    }
+
+    .feedback {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsive Tasarım - Orta Boy Cihazlar (Tablet) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .logo {
+        max-width: 140px;
+    }
+
+    .star {
+        width: 35px;
+    }
+}
+
+/* Büyük Ekranlar İçin */
+@media (min-width: 769px) {
+    .container {
+        padding: 40px;
+        max-width: 600px; /* Daha geniş ekranlarda genişliği artır */
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .star {
+        width: 50px; /* Büyük ekranlarda yıldızlar daha büyük olabilir */
+    }
+
+    .logo {
+        max-width: 160px; /* Büyük ekranlarda logo genişliği artır */
+    }
+}

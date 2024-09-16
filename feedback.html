@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Yorum Formu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="assets/logo.png" alt="Marka Logosu" class="logo">
+        <p class="title">Müşterilerimizin %100 memnun olmasını istiyoruz. Lütfen neden kötü bir deneyim yaşadığınızı bize bildirin, böylece hizmetimizi geliştirebiliriz.</p>
+        
+        <form id="feedbackForm" action="process_feedback.php" method="post">
+            <input type="text" name="name" placeholder="Adınız" required>
+            <input type="email" name="email" placeholder="E-Posta" required>
+            <input type="tel" name="phone" placeholder="Alan kodu ile telefon" class="phone-input" required>
+            <textarea name="review" placeholder="Gözden geçir" required></textarea>
+            
+            <div class="consent">
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">Kişisel verilerin işlenmesine izin veriyorum.</label>
+            </div>
+            
+            <button type="submit" class="submit-btn">Gönder</button>
+        </form>
+        
+        <a href="#" class="review-link">Herkese açık bir inceleme bırakın</a>
+    </div>
+    
+    <script src="js/scripts.js"></script>
+</body>
+</html>

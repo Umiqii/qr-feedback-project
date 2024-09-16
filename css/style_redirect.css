@@ -1,0 +1,104 @@
+/* Genel Ayarlar */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Konteyner */
+.container {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Logo - Yalnızca logo boyutu 150x150 ayarlanıyor */
+.logo {
+    width: 100%;
+    max-width: 150px;  /* Maksimum genişlik ve yükseklik 150px olarak belirlendi */
+    height: auto;
+    margin-bottom: 20px;  /* Mesaj ile arasındaki mesafe */
+}
+
+/* Mesaj */
+.message {
+    font-size: 1rem;  /* Temel font boyutu */
+    color: #333;  /* Metin rengi */
+    padding: 0 20px;  /* Yan padding */
+    margin-bottom: 20px;  /* Butonlar ile arasındaki mesafe */
+}
+
+/* Butonlar */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 15px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-icon {
+    flex: 0 0 auto;  /* Flexbox içinde boyutu sabit kalır */
+    width: 20%;  /* Genişlik, buton genişliğinin %20'si */
+    max-width: 35px;  /* Maksimum genişlik sınırı */
+    height: auto;
+    margin-right: 10px;
+}
+
+.button-text {
+    flex: 1;  /* Geri kalan alanı doldurur */
+    text-align: left;  /* Metin hizalaması */
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 120px;  /* Küçük cihazlarda logo boyutu daha küçük olacak */
+    }
+
+    .button-icon {
+        max-width: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 100px;  /* Çok küçük cihazlarda logo boyutu daha da küçük olacak */
+    }
+
+    .button-icon {
+        max-width: 25px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 800px;  /* Daha geniş ekranlarda konteyner genişliği */
+    }
+    .button {
+        padding: 15px 20px;  /* Daha geniş padding */
+    }
+    .button-icon {
+        max-width: 40px;  /* İkon boyutunu artır */
+    }
+    .message {
+        font-size: 1.25rem;  /* Büyük ekranlarda mesaj fontunu büyüt */
+    }
+}
